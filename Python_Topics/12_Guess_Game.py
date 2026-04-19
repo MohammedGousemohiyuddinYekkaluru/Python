@@ -20,4 +20,25 @@ while True:
             attempts += 1
             print("Wrong guess, guess higher, Try again")
             guess_num = int(input("Guess a number from 1 - 100 : "))
+
+# Instructor version
+
+import random # random module for generating random numbers
+
+jackpot = random.randint(1, 100) # both numbers are included
+
+guess = int(input("guess the number : "))
+counter = 1
+
+while guess != jackpot:
+    if guess < jackpot:
+        print("Guess Higher")
+    else:
+        print("Guess Lower")
+    
+    guess = int(input("guess the number : "))
+    counter += 1
+
+print("Correct guess")
+print("you took", counter, "attempts")
     
